@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-bs-theme="auto" lang="en">
+<html data-bs-theme="auto" lang="it">
 
 <head>
     <meta charset="utf-8">
@@ -9,108 +9,33 @@
         {
             "@context": "http://schema.org",
             "@type": "WebSite",
-            "name": "Brand",
-            "url": "https:// mariocosenza.github.io"
+            "name": "Mario Cosenza",
+            "url": "https://mariocosenza.github.io"
         }
-    </script>
-    <script>
-        (function() {
-
-            // JavaScript snippet handling Dark/Light mode switching
-
-            const getStoredTheme = () => localStorage.getItem('theme');
-            const setStoredTheme = theme => localStorage.setItem('theme', theme);
-            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
-
-            const getPreferredTheme = () => {
-
-                if (forcedTheme) return forcedTheme;
-
-                const storedTheme = getStoredTheme();
-                if (storedTheme) {
-                    return storedTheme;
-                }
-
-                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
-
-                if (pageTheme) {
-                    return pageTheme;
-                }
-
-                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            }
-
-            const setTheme = theme => {
-                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.setAttribute('data-bs-theme', 'dark');
-                } else {
-                    document.documentElement.setAttribute('data-bs-theme', theme);
-                }
-            }
-
-            setTheme(getPreferredTheme());
-
-            const showActiveTheme = (theme, focus = false) => {
-                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
-
-                if (!themeSwitchers.length) return;
-
-                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-                    element.classList.remove('active');
-                    element.setAttribute('aria-pressed', 'false');
-                });
-
-                for (const themeSwitcher of themeSwitchers) {
-
-                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
-
-                    if (btnToActivate) {
-                        btnToActivate.classList.add('active');
-                        btnToActivate.setAttribute('aria-pressed', 'true');
-                    }
-                }
-            }
-
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-                const storedTheme = getStoredTheme();
-                if (storedTheme !== 'light' && storedTheme !== 'dark') {
-                    setTheme(getPreferredTheme());
-                }
-            });
-
-            window.addEventListener('DOMContentLoaded', () => {
-                showActiveTheme(getPreferredTheme());
-
-                document.querySelectorAll('[data-bs-theme-value]')
-                    .forEach(toggle => {
-                        toggle.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            const theme = toggle.getAttribute('data-bs-theme-value');
-                            setStoredTheme(theme);
-                            setTheme(theme);
-                            showActiveTheme(theme);
-                        })
-                    })
-            });
-        })();
-    </script>
+    </script><script>!function(){const e=()=>localStorage.getItem("theme"),t=document.documentElement.getAttribute("data-bss-forced-theme"),a=()=>{if(t)return t;const a=e();if(a)return a;const r=document.documentElement.getAttribute("data-bs-theme");return r||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")},r=e=>{"auto"===e&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.setAttribute("data-bs-theme","dark"):document.documentElement.setAttribute("data-bs-theme",e)};r(a());const c=(e,t=!1)=>{const a=[].slice.call(document.querySelectorAll(".theme-switcher"));if(a.length){document.querySelectorAll("[data-bs-theme-value]").forEach((e=>{e.classList.remove("active"),e.setAttribute("aria-pressed","false")}));for(const t of a){const a=t.querySelector('[data-bs-theme-value="'+e+'"]');a&&(a.classList.add("active"),a.setAttribute("aria-pressed","true"))}}};window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",(()=>{const t=e();"light"!==t&&"dark"!==t&&r(a())})),window.addEventListener("DOMContentLoaded",(()=>{c(a()),document.querySelectorAll("[data-bs-theme-value]").forEach((e=>{e.addEventListener("click",(t=>{t.preventDefault();const a=e.getAttribute("data-bs-theme-value");(e=>{localStorage.setItem("theme",e)})(a),r(a),c(a)}))}))}))}();</script>
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/_44c86f32-d0aa-4876-9ecd-8a82334baa99.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/_44c86f32-d0aa-4876-9ecd-8a82334baa99.jpeg" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/_44c86f32-d0aa-4876-9ecd-8a82334baa99.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/_44c86f32-d0aa-4876-9ecd-8a82334baa99.jpeg" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/_44c86f32-d0aa-4876-9ecd-8a82334baa99.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/_44c86f32-d0aa-4876-9ecd-8a82334baa99.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/_44c86f32-d0aa-4876-9ecd-8a82334baa99.jpeg">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="assets/css/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="57">
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container"><a class="navbar-brand" href="#page-top">Brand</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="container"><a class="navbar-brand" href="#page-top">Mario Cosenza</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">ContaTTi</a></li>
                 </ul>
             </div>
         </div>
@@ -119,12 +44,12 @@
         <div class="container my-auto">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
-                    <h1 class="text-uppercase"><strong>Your Favorite Source of Free Bootstrap Themes</strong></h1>
+                    <h1 class="text-uppercase"><strong>MArio cosenza</strong></h1>
                     <hr>
                 </div>
             </div>
             <div class="col-lg-8 mx-auto">
-                <p class="text-faded mb-5">We can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p><a class="btn btn-primary btn-xl" role="button" href="#services">Find Out More</a>
+                <p class="text-faded mb-5">Sono Mario Cosenza, uno studente di Informatica presso l’Università di Salerno, appassionato di sviluppo software e tecnologie emergenti.</p><a class="btn btn-primary btn-xl" role="button" href="#cv">SCOPRI di più</a>
             </div>
         </div>
     </header>
@@ -132,9 +57,9 @@
         <div class="container">
             <div class="row">
                 <div class="col offset-lg-8 text-center mx-auto">
-                    <h2 class="text-white section-heading">We've got what you need!</h2>
+                    <h2 class="text-white section-heading">Ho la soluzione che stai cercando!</h2>
                     <hr class="light my-4">
-                    <p class="text-faded mb-4">Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes are open source, free to download, and easy to use. No strings attached!</p><a class="btn btn-light btn-xl" role="button" href="#services">Get Started!</a>
+                    <p class="text-faded mb-4">Attualmente sto completando la mia laurea in Informatica presso l’Università di Salerno, dove ho acquisito solide basi teoriche e pratiche in vari ambiti dell’informatica.</p><a class="btn btn-light btn-xl" role="button" href="#services">INIZIAMO</a>
                 </div>
             </div>
         </div>
@@ -143,7 +68,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
+                    <h2 class="section-heading">Competenze</h2>
                     <hr class="my-4">
                 </div>
             </div>
@@ -153,25 +78,25 @@
                 <div class="col-md-6 col-lg-3 text-center">
                     <div class="mx-auto service-box mt-5"><i class="fa fa-diamond fa-4x text-primary mb-3" data-aos="zoom-in" data-aos-duration="200" data-aos-once="true"></i>
                         <h3 class="mb-3">Sturdy Templates</h3>
-                        <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+                        <p class="text-muted mb-0">Come programmatore, mi impegno costantemente a fornire soluzioni innovative e di alta qualità, garantendo codice pulito, efficiente e ben documentato per ogni progetto.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center">
                     <div class="mx-auto service-box mt-5"><i class="fa fa-paper-plane fa-4x text-primary mb-3" data-aos="zoom-in" data-aos-duration="200" data-aos-delay="200" data-aos-once="true"></i>
-                        <h3 class="mb-3">Ready to Ship</h3>
-                        <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+                        <h3 class="mb-3">Sempre disponibile</h3>
+                        <p class="text-muted mb-0">Sono sempre disponibile e pronto ad affrontare nuove sfide, garantendo supporto e collaborazione in ogni momento.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center">
                     <div class="mx-auto service-box mt-5"><i class="fa fa-newspaper-o fa-4x text-primary mb-3" data-aos="zoom-in" data-aos-duration="200" data-aos-delay="400" data-aos-once="true"></i>
-                        <h3 class="mb-3">Up to Date</h3>
-                        <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+                        <h3 class="mb-3">Aggiornato</h3>
+                        <p class="text-muted mb-0">Forte attitudine all’apprendimento continuo e all’adattamento a nuove sfide.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center">
                     <div class="mx-auto service-box mt-5"><i class="fa fa-heart fa-4x text-primary mb-3" data-aos="fade" data-aos-duration="200" data-aos-delay="600" data-aos-once="true"></i>
-                        <h3 class="mb-3">Made with Love</h3>
-                        <p class="text-muted mb-0">You have to make your websites with love these days!</p>
+                        <h3 class="mb-3">Fatto con passione</h3>
+                        <p class="text-muted mb-0">Questo sito web è stato creato con passione e dedizione, riflettendo il mio impegno e la mia creatività in ogni dettaglio.</p>
                     </div>
                 </div>
             </div>
@@ -180,51 +105,51 @@
     <section id="portfolio" class="p-0">
         <div class="container-fluid p-0">
             <div class="row g-0 popup-gallery">
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/1.jpg"><img class="img-fluid" src="assets/img/thumbnails/1.jpg">
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/thumbnails/java-logo-png.png"><img class="img-fluid" src="assets/img/thumbnails/java-logo-png.png">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
+                                <div class="project-name"><span>Java</span></div>
                             </div>
                         </div>
                     </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/2.jpg"><img class="img-fluid" src="assets/img/thumbnails/2.jpg">
+                <div class="col-sm-6 col-lg-4"><a class="text-center portfolio-box" href="assets/img/thumbnails/images.png"><img class="img-fluid" src="assets/img/thumbnails/images.png" width="235" height="235">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
+                                <div class="project-name"><span>Javascript&nbsp;</span></div>
                             </div>
                         </div>
                     </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/3.jpg"><img class="img-fluid" src="assets/img/thumbnails/3.jpg">
+                <div class="col-sm-6 col-lg-4"><a class="text-center portfolio-box" href="assets/img/fullsize/3.jpg"><img class="img-fluid" src="assets/img/thumbnails/Go-Logo_Blue-300x265.png">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
+                                <div class="project-name"><span>Go</span></div>
                             </div>
                         </div>
                     </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/4.jpg"><img class="img-fluid" src="assets/img/thumbnails/4.jpg">
+                <div class="col-sm-6 col-lg-4"><a class="text-center portfolio-box" href="assets/img/fullsize/4.jpg"><img class="img-fluid" src="assets/img/thumbnails/pngegg.png" width="245" height="245">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
+                                <div class="project-name"><span>C</span></div>
                             </div>
                         </div>
                     </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/5.jpg"><img class="img-fluid" src="assets/img/thumbnails/5.jpg">
+                <div class="col-sm-6 col-lg-4"><a class="text-center portfolio-box" href="assets/img/fullsize/5.jpg"><img class="img-fluid" src="assets/img/thumbnails/eceb15684d4183c66f73c1a9bb777eef708b2b66.png" width="370" height="247">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
+                                <div class="project-name"><span>MySQL</span></div>
                             </div>
                         </div>
                     </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/6.jpg"><img class="img-fluid" src="assets/img/thumbnails/6.jpg">
+                <div class="col-sm-6 col-lg-4"><a class="text-center portfolio-box" href="assets/img/fullsize/6.jpg"><img class="img-fluid" src="assets/img/thumbnails/Postgresql_elephant.svg.png" width="230" height="237">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
+                                <div class="project-name"><span>PostgreSQL</span></div>
                             </div>
                         </div>
                     </a></div>
@@ -233,24 +158,21 @@
     </section>
     <section class="text-white bg-dark">
         <div class="container text-center">
-            <h2 class="mb-4">Lorem Ipsum!</h2><a class="btn btn-light btn-xl" role="button" data-aos="zoom-in" data-aos-duration="400" data-aos-once="true" href="#">Download Now!</a>
+            <h2 class="mb-4">Il mio curriculum in PDF</h2><a class="btn btn-light btn-xl" role="button" data-aos="zoom-in" data-aos-duration="400" data-aos-once="true" href="#">SCARICALO ORA!</a>
         </div>
     </section>
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 text-center mx-auto">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <h2 class="section-heading">Rimaniamo in contatto!</h2>
                     <hr class="my-4">
-                    <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                    <p class="mb-5">Pronto per iniziare il tuo prossimo progetto con me? È fantastico! Mandami una email e ti ricontatterò il prima possibile!</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 text-center ms-auto"><i class="fa fa-phone fa-3x mb-3" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true"></i>
-                    <p>123-456-6789</p>
-                </div>
-                <div class="col-lg-4 text-center me-auto"><i class="fa fa-envelope-o fa-3x mb-3" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true"></i>
-                    <p><a href="mailto:your-email@your-domain.com">email@example.com</a></p>
+            <div class="row text-center d-xxl-flex justify-content-center align-items-center align-content-center justify-content-xxl-center align-items-xxl-center">
+                <div class="col-lg-4 col-xxl-12 text-center me-auto" style="text-align: center;"><i class="fa fa-envelope-o fa-3x mb-3" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true"></i>
+                    <p><a href="mailto:your-email@your-domain.com">cosenzamario@proton.me</a></p>
                 </div>
             </div>
         </div>
@@ -258,9 +180,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/baguetteBox.min.js"></script>
-    <script src="assets/js/creative.js"></script>
+    <script src="assets/js/script.min.js"></script>
 </body>
 
 </html>
